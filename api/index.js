@@ -19,5 +19,13 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("DB connection error:", err));
 
+app.get("/", (req, res)=>{
+  res.json({
+    success: true,
+    message: "Wrlcome To Practical Management System - Lokesh"
+  })
+})
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
